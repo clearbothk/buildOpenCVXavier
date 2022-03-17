@@ -2,7 +2,7 @@
 # License: MIT. See license file in root directory
 # Copyright(c) JetsonHacks (2017-2018)
 
-OPENCV_VERSION=3.4.3
+OPENCV_VERSION=4.5.2
 # Jetson AGX Xavier
 ARCH_BIN=7.2
 # Jetson TX2
@@ -145,6 +145,7 @@ cd build
 
 time cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D CMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX} \
+      -D OPENCV_EXTRA_MODULES_PATH=/home/clearbot/data/src/opencv_contrib/modules \
       -D WITH_CUDA=ON \
       -D CUDA_ARCH_BIN=${ARCH_BIN} \
       -D CUDA_ARCH_PTX="" \
